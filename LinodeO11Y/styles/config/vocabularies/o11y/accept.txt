@@ -16,6 +16,7 @@ ipservice
 Jira
 JSON
 kernelspace
+Kube
 kube-prometheus
 Linmon
 Linmons
