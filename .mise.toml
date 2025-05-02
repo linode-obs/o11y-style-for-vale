@@ -1,0 +1,13 @@
+[tasks.build]
+run = 'zip -r LinodeO11Y.zip LinodeO11Y/'
+description = 'Build ZIP file for release'
+alias = 'b'
+
+[tasks.release]
+depends = ['build']
+description = 'Use GitHub CLI to create a new release'
+confirm = 'Are you sure you want to cut a new release?'
+run = 'gh release create {{arg(name="version_tag")}} LinodeO11Y.zip'
+
+[tools]
+github-cli = "2.69.0"
